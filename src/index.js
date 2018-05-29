@@ -2,12 +2,7 @@ import ReactInjextContainer, { reactInjextContainer } from './container';
 import reactInjextDecorator from './decorator';
 import reactInjextHOC from './hoc';
 
-const container = reactInjextContainer;
-const inject = reactInjextDecorator;
-
 export default reactInjextHOC;
-export {
-  ReactInjextContainer,
-  container,
-  inject,
-};
+export const container = reactInjextContainer;
+export const inject = reactInjextDecorator;
+export const InjextContainer = ReactInjextContainer;
