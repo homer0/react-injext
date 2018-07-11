@@ -69,7 +69,7 @@ class ReactInjextContainer {
   _buildInstance(ClassForInstance) {
     const dependencies = ClassForInstance.inject || [];
     const dependenciesList = dependencies
-    .map((dependency) => this._getDependency(dependency));
+    .map((dependency) => this._getInstance(dependency));
     return new ClassForInstance(...dependenciesList);
   }
 

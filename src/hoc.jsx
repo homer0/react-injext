@@ -8,7 +8,7 @@ const reactInjextHOC = (dependencies, container = null) =>
       const newProps = Object.assign(
         {},
         props,
-        newContainer.getDictionary(...dependencies, true),
+        newContainer.getDictionary(...dependencies),
       );
 
       return (<Component {...newProps} />);
