@@ -10,9 +10,12 @@ import { compose } from 'recompose';
 import inject from 'react-injext';
 import MyService from '...';
 
-const MyComponent = (props) => (
-  <button onClick={() => props.myService.doSomething()}>Click Me!</button>
-);
+const MyComponent = (props) => {
+  const { dependencies: [myService] } = props;
+  return (
+    <button onClick={() => myService.doSomething()}>Click Me!</button>
+  );
+}
 
 export default compose(
   inject(MyService)
@@ -20,6 +23,8 @@ export default compose(
 ```
 
 > The HOC support infinite number of items.
+>
+> **Named props were removed (for now) as they don't work after uglification.**
 
 ## Decorator (for services)
 
