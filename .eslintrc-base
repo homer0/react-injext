@@ -8,6 +8,7 @@
       "allowAfterThis": true,
       "allowAfterSuper": true
     }],
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "operator-linebreak": ["error", "after"]
   }
 }
